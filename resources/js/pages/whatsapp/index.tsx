@@ -62,7 +62,7 @@ export default function Index() {
             </thead>
             <tbody>
               {whatsapps.map((w) => (
-                <tr key={w.id} className="border-b hover:bg-gray-300">
+                <tr key={w.id} className="border-b dark:hover:bg-gray-700 hover:bg-gray-50 transition">
                   <td className="p-2">{w.id}</td>
                   <td className="p-2 truncate max-w-xs">{w.message}</td>
                   <td className="p-2 truncate max-w-xs">{w.token}</td>

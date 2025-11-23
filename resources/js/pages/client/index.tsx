@@ -90,7 +90,7 @@ export default function Index() {
                                 appointments.data.map((a) => (
                                     <tr
                                         key={a.id}
-                                        className="border-t hover:bg-gray-50 transition"
+                                        className="border-t dark:hover:bg-gray-700 hover:bg-gray-50 transition"
                                     >
                                         <td className="px-4 py-2">{a.service}</td>
                                         <td className="px-4 py-2">{a.client_name}</td>
