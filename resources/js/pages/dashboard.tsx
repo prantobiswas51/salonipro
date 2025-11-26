@@ -273,7 +273,7 @@ export default function Dashboard({
                 <div className="fixed inset-0 z-[9999] bg-gray-700/20 flex justify-center items-center p-4">
                     <div className="bg-sky-100 dark:bg-gray-800 dark:border-gray-100 w-full max-w-[95%] sm:max-w-[30rem] rounded-lg shadow-lg 
                   max-h-[90vh] overflow-y-auto p-6">
-                        <h2 className="text-xl font-bold mb-4">Edit Appointment</h2>
+                        <h2 className="text-xl font-bold mb-4">Create Appointment</h2>
 
                         
                         {/* FORM */}
@@ -284,7 +284,7 @@ export default function Dashboard({
                                     <label className="block mb-1">Client Name</label>
                                     <input
                                         type="text"
-                                        className="w-full border bg-white p-2 rounded"
+                                        className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                         placeholder="e.g. John"
                                         value={data.client_name}
                                         onChange={(e) => setData("client_name", e.target.value)}
@@ -297,7 +297,7 @@ export default function Dashboard({
                                     <label className="block mb-1">Client Phone</label>
                                     <input
                                         type="tel"
-                                        className="w-full border bg-white p-2 rounded"
+                                        className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                         placeholder="e.g. +2 485 485 744"
                                         value={data.client_phone}
                                         onChange={(e) => setData("client_phone", e.target.value)}
@@ -316,7 +316,7 @@ export default function Dashboard({
                                     <select
                                         value={data.service}
                                         onChange={(e) => setData("service", e.target.value)}
-                                        className="w-full border bg-white p-2 rounded dark:bg-gray-900"
+                                        className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                     >
                                         <option value="">Select</option>
                                         <option value="Hair Cut">Hair Cut</option>
@@ -330,7 +330,7 @@ export default function Dashboard({
                                     <label className="block mb-1">Duration (Minutes)</label>
                                     <input
                                         type="number"
-                                        className="w-full border bg-white p-2 rounded"
+                                        className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                         placeholder="30"
                                         value={data.duration}
                                         onChange={(e) => setData("duration", e.target.value)}
@@ -344,7 +344,7 @@ export default function Dashboard({
                                 <label className="block mb-1">Appointment Time</label>
                                 <input
                                     type="datetime-local"
-                                    className="w-full border bg-white p-2 rounded"
+                                    className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                     value={data.start_time}
                                     onChange={(e) => setData("start_time", e.target.value)}
                                 />
@@ -361,7 +361,7 @@ export default function Dashboard({
                                 <select
                                     value={data.status}
                                     onChange={(e) => setData("status", e.target.value)}
-                                    className="w-full border bg-white p-2 rounded dark:bg-gray-900"
+                                    className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                 >
                                     <option value="Scheduled">Scheduled</option>
                                     <option value="Confirmed">Confirmed</option>
@@ -374,7 +374,7 @@ export default function Dashboard({
                             <div>
                                 <label className="block mb-1">Notes</label>
                                 <textarea
-                                    className="w-full border bg-white p-2 rounded"
+                                    className="w-full border dark:bg-gray-800 dark:border-gray-700 p-2 rounded"
                                     value={data.notes}
                                     onChange={(e) => setData("notes", e.target.value)}
                                 />
