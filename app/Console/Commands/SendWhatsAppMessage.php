@@ -41,7 +41,7 @@ class SendWhatsAppMessage extends Command
                         }
 
                         $time = $appointment->start_time
-                            ? Carbon::parse($appointment->start_time)->timezone('Europe/Rome')->format('h:i A')
+                            ? Carbon::parse($appointment->start_time)->timezone(config('app.timezone'))->format('h:i A')
                             : null;
 
                         // Fetch WhatsApp message template

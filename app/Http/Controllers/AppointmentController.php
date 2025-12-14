@@ -162,8 +162,8 @@ class AppointmentController extends Controller
                         continue;
                     }
 
-                    $start = \Carbon\Carbon::parse($startTime)->timezone('UTC');
-                    $end = $endTime ? \Carbon\Carbon::parse($endTime)->timezone('UTC') : $start->copy()->addHour();
+                    $start = \Carbon\Carbon::parse($startTime)->timezone(config('app.timezone'));
+                    $end = $endTime ? \Carbon\Carbon::parse($endTime)->timezone(config('app.timezone')) : $start->copy()->addHour();
                     $duration = $start->diffInMinutes($end);
 
                     // ---- Create or Update Appointment ----

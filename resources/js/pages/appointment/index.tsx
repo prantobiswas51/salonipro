@@ -440,7 +440,7 @@ export default function Index() {
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.client_name}</td>
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.client_phone}</td>
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.service}</td>
-                  <td className="px-3 lg:px-6 py-4 border-b">{new Date(appointment.start_time).toLocaleString()}</td>
+                  <td className="px-3 lg:px-6 py-4 border-b">{new Date(appointment.start_time).toLocaleString("sv-SE", { timeZone: import.meta.env.VITE_TIMEZONE || "UTC" })}</td>
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.duration} Minutes</td>
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.status}</td>
                   <td className="px-3 lg:px-6 py-4 border-b">{appointment.reminder_sent}</td>
@@ -660,7 +660,7 @@ export default function Index() {
                     value={
                       editing.start_time
                         ? new Date(editing.start_time)
-                          .toLocaleString("sv-SE", { timeZone: "Europe/Rome" })
+                          .toLocaleString("sv-SE", { timeZone: import.meta.env.VITE_TIMEZONE || "UTC" })
                           .slice(0, 16) // "YYYY-MM-DDTHH:mm"
                         : ""
                     }

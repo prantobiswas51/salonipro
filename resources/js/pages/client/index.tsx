@@ -97,7 +97,7 @@ export default function Index() {
                                         <td className="px-4 py-2">{a.client_phone}</td>
                                         <td className="px-4 py-2">{a.status}</td>
                                         <td className="px-4 py-2">
-                                            {new Date(a.start_time).toLocaleString()}
+                                            {new Date(a.start_time).toLocaleString("sv-SE", { timeZone: import.meta.env.VITE_TIMEZONE || "UTC" })}
                                         </td>
                                     </tr>
                                 ))

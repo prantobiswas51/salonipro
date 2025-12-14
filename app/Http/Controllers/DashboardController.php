@@ -75,7 +75,7 @@ class DashboardController extends Controller
             ];
         });
 
-        return inertia('Dashboard', [
+        return inertia('dashboard', [
             'appointments' => $appointmentsData,
 
             'inProgress' => $inProgress ? [

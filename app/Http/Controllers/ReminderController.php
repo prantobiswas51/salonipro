@@ -15,7 +15,7 @@ class ReminderController extends Controller
 
     public function sendAppointmentReminders()
     {
-        $tz = 'Europe/Rome';
+        $tz = config('app.timezone');
 
         $tomorrowStart = Carbon::now($tz)->addDay()->startOfDay();
         $tomorrowEnd = Carbon::now($tz)->addDay()->endOfDay();

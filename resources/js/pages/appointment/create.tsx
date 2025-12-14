@@ -41,7 +41,7 @@ export default function CreateAppointment() {
     const formatDateForInput = (date: Date) => {
         // "sv-SE" gives a sortable YYYY-MM-DD HH:mm:ss
         return date
-            .toLocaleString("sv-SE", { timeZone: "Europe/Rome" })
+            .toLocaleString("sv-SE", { timeZone: import.meta.env.VITE_TIMEZONE || "UTC" })
             .replace(" ", "T") // datetime-local expects T between date & time
             .slice(0, 16);     // trim seconds
     };

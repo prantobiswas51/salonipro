@@ -111,7 +111,7 @@ export default function Dashboard({
 
     const formatDateForInput = (date: Date) => {
         return date
-            .toLocaleString("sv-SE", { timeZone: "Europe/Rome" })
+            .toLocaleString("sv-SE", { timeZone: import.meta.env.VITE_TIMEZONE || "UTC" })
             .replace(" ", "T")
             .slice(0, 16);
     };
